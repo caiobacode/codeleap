@@ -1,0 +1,77 @@
+.signup-div {
+  background: #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.signup-form {
+  width: 500px;
+  height: 205px;
+  padding-right: 22px;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 16px;
+  border: 1px solid #CCCCCC;
+  background: #FFFFFF;
+}
+
+.signup-title {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.signup-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.signup-input {
+  width: 441px;
+  height: 28px;
+  margin-top: 5px;
+  padding-left: 10px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-style: normal;
+  border-radius: 8px;
+  border: #777777 1px solid;
+  color: black;
+  background: #FFFFFF;
+}
+
+.signup-input::placeholder {
+  color: #cccccc;
+}
+
+.btn-div {
+  width: 452px;
+  height: 40px;
+  display: flex;
+  justify-content: end;
+}
+
+.signup-btn {
+  width: 111px;
+  height: 32px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 8px;
+  color: white;
+  background: #7695EC;
+}
