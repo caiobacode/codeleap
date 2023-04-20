@@ -52,6 +52,15 @@
   background: #FFFFFF;
 }
 
+.signup-input:focus {
+  outline: none;
+  border: solid #7695EC 1px;
+}
+
+.signup-input:hover {
+  border: solid #4b75e7 1px;
+}
+
 .signup-input::placeholder {
   color: #cccccc;
 }
@@ -66,6 +75,7 @@
 .signup-btn {
   width: 111px;
   height: 32px;
+  cursor: pointer;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -74,4 +84,16 @@
   border-radius: 8px;
   color: white;
   background: #7695EC;
+  transition: 150ms ease-in-out;
+}
+
+.signup-btn:not([disabled]):hover {
+  background: #4b75e7;
+  transform: scale(1.04);
+}
+
+.signup-btn:disabled {
+  cursor: auto;
+  opacity: 0.5;
+  background: #777777;
 }
