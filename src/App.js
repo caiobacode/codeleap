@@ -1,7 +1,15 @@
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Signup, Home } from './pages/Index';
+
 function App () {
   return (
     <div className="App">
-      <h1>Codeleap</h1>
+      <Routes>
+        <Route Component={Signup} exact path='/'></Route>
+        <Route Component={Signup} path='/signup'></Route>
+        <Route Component={Home} path='/home'></Route>
+      </Routes>
     </div>
   );
 }
