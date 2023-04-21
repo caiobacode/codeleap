@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  position: fixed;
+  max-width: 800px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background: #7695EC;
+}
+
+.header-text {
+  margin-left: 37px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+}

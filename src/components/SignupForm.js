@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export default function SignupForm (history) {
+export default function SignupForm () {
   const [username, setUsername] = useState('');
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/home');
+  };
 
   return (
     <div className='signup-form'>
@@ -18,7 +24,7 @@ export default function SignupForm (history) {
       </div>
       <div className='btn-div'>
         <button
-          onClick={() => console.log('btn-enabled')}
+          onClick={handleClick}
           disabled={username === ''}
           className='signup-btn'
           type='button'
