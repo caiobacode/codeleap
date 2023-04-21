@@ -1,14 +1,26 @@
-import React from 'react';
-import Header from '../components/Header';
+import React, { useEffect, useState } from 'react';
+import { Header, PostForm, Post } from '../components';
+import { getPosts } from '../actions';
 import '../style/Home.css';
-import PostForm from '../components/PostForm';
 
 export default function Home () {
+  const [pagePosts, setPagePosts] = useState([]);
+
+  useEffect(() => {
+    setPosts();
+  }, []);
+
+  async function setPosts () {
+    const allPosts = await getPosts();
+    setPagePosts(allPosts);
+  }
+
   return (
     <div className='home-div'>
       <Header/>
       <div className='home-content'>
         <PostForm/>
+        { pagePosts?.map((p) => <Post key={p.id} postInfo={p}/>)}
       </div>
     </div>
   );
