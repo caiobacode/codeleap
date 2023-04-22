@@ -14,7 +14,7 @@ export default function PostForm () {
     <div className='post-form'>
       <h1 className='post-question'>What's on your mind?</h1>
       <div className='input-div'>
-        <span className='span-type'>Title</span>
+        <span className='form-span-type'>Title</span>
         <input
           type='text'
           onChange={({ target: { value } }) => setPostTitle(value)}
@@ -24,7 +24,7 @@ export default function PostForm () {
         />
       </div>
       <div className='input-div'>
-        <span className='span-type'>Content</span>
+        <span className='form-span-type'>Content</span>
         <textarea
           value={postContent}
           onChange={({ target: { value } }) => setPostContent(value)}

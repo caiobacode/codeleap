@@ -1,21 +1,23 @@
 import React from 'react';
+import formatDate from '../utils/formatDate';
+import '../style/Post.css';
 
 export default function Post ({ postInfo }) {
-  const { id, username, created_datetime, title, content } = postInfo;
-  const formatedDate = new Date(created_datetime);
-  console.log(formatedDate.toTimeString());
-  console.log(formatedDate.getMinutes());
-  console.log('break line');
+  const { username, created_datetime, title, content } = postInfo;
+  const formatedPostDate = formatDate(created_datetime);
+
   return (
-    <div>
-      <p>{id}</p>
-      <p>{username}</p>
-      <p>{formatedDate.toTimeString()}</p>
-      <p>{title}</p>
-      <p>{content}</p>
-      <br/>
-      <br/>
-      <br/>
+    <div className='post-div'>
+      <div className='post-title-div'>
+        <p>{title}</p>
+      </div>
+      <div className='post-details-div'>
+        <span className='post-username'>@{username}</span>
+        <span className='post-date'>{formatedPostDate}</span>
+      </div>
+      <div className='post-content-div'>
+        <text className='content-text'>{content}</text>
+      </div>
     </div>
   );
 }

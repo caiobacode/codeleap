@@ -7,10 +7,10 @@ export default function Home () {
   const [pagePosts, setPagePosts] = useState([]);
 
   useEffect(() => {
-    setPosts();
+    setInitialPosts();
   }, []);
 
-  async function setPosts () {
+  async function setInitialPosts () {
     const allPosts = await getPosts();
     setPagePosts(allPosts);
   }
