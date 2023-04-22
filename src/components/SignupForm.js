@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { signupUser } from '../redux/userSlice';
 
 export default function SignupForm () {
   const [username, setUsername] = useState('');
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleClick = () => {
+    dispatch(signupUser(username));
     navigate('/home');
   };
 

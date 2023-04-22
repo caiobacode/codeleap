@@ -1,19 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Header, PostForm, Post } from '../components';
-import { getPosts } from '../actions';
 import '../style/Home.css';
+import { useSelector } from 'react-redux';
+import { selectPosts } from '../redux/postsSlice';
 
 export default function Home () {
-  const [pagePosts, setPagePosts] = useState([]);
-
-  useEffect(() => {
-    setInitialPosts();
-  }, []);
-
-  async function setInitialPosts () {
-    const allPosts = await getPosts();
-    setPagePosts(allPosts);
-  }
+  const pagePosts = useSelector(selectPosts);
 
   return (
     <div className='home-div'>

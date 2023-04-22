@@ -7,7 +7,7 @@ export default function formatDate (date) {
   if (resultInMinutes < 60) return `${parseInt(resultInMinutes)} minutes ago`;
 
   const resultInHours = resultInMinutes / 60;
-  if (resultInHours < 24) return `${parseInt(resultInHours)} hours ago`;
+  if (resultInHours < 24) return `${parseInt(resultInHours)} hour$ ago`;
 
   const resultInDays = resultInHours / 24;
   return `${parseInt(resultInDays)} days ago`;
