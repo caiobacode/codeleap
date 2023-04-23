@@ -3,17 +3,26 @@ import '../style/Alerts.css';
 import { useDispatch } from 'react-redux';
 import { setAlertModeOff } from '../redux';
 
-export default function EditingAlert () {
+export default function EditingAlert ({ props: { isOn, alertType, updatingPost } }) {
   const dispatch = useDispatch();
+
+  const alertClassName = (isOn && alertType === 'edit')
+    ? 'alert-div'
+    : 'alert-div off';
+
+  const divClassName = (isOn && alertType === 'edit')
+    ? 'editing-div'
+    : 'editing-off';
+
   return (
-    <div className='alert-div'>
-      <div className='editing-div'>
-        <h1>Voce esta editando um post</h1>
+    <div className={alertClassName}>
+      <div className={divClassName}>
+        <h1>editing post</h1>
         <button
           type='button'
           onClick={() => dispatch(setAlertModeOff())}
         >
-          Cancelar
+          Cancel
         </button>
       </div>
     </div>

@@ -11,8 +11,7 @@ import { DeletingAlert, EditingAlert } from './components';
 
 function App () {
   const dispatch = useDispatch();
-  const { isOn, alertType } = useSelector(selectAlertMode);
-  console.log(isOn, alertType);
+  const alertPropeties = useSelector(selectAlertMode);
 
   useEffect(() => {
     getLoggedUser();
@@ -31,12 +30,8 @@ function App () {
 
   return (
     <div className="App">
-      {
-        (isOn && alertType === 'delete') && <DeletingAlert />
-      }
-      {
-        (isOn && alertType === 'edit') && <EditingAlert />
-      }
+      <DeletingAlert props={ alertPropeties } />
+      <EditingAlert props={ alertPropeties } />
       <Routes>
         <Route Component={Signup} exact path='/'></Route>
         <Route Component={Signup} path='/signup'></Route>

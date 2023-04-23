@@ -1,21 +1,105 @@
 .alert-div {
   position: fixed;
-  z-index: 10;
+  z-index: 1;
   background-color: transparent;
   width: 100vw;
   display: flex;
+  opacity: 1;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  transition: 100ms ease-in-out;
+}
 
+.off {
+  opacity: 0;
+  z-index: -1;
+  transition: 1000ms ease-in-out;
+}
+
+.deleting-off {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+  filter: blur(20px);
+  transition: 350ms ease-in-out;
 }
 
 .deleting-div {
   width: 660px;
-  height: 332px;
+  height: 146px;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 1px solid #999999;
   border-radius: 16px;
   background-color: #FFFFFF;
+  transition: 350ms ease-in-out;
+}
+
+.delete-alert-btns-div {
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+  transition: 350ms ease-in-out;
+}
+
+.cancel-update-btn, .delete-post-btn {
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  width: 120px;
+  height: 32px;
+  border: solid 1px #999999;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  transition: 200ms ease-in-out;
+}
+
+.cancel-update-btn:hover {
+  transform: scale(1.05);
+  background-color: #f2f2f2;
+}
+
+.delete-post-btn:hover {
+  transform: scale(1.05);
+  background-color: #ff1a1a;
+}
+
+.cancel-update-btn {
+  background-color: #FFFFFF;
+  margin-right: 16px;
+}
+
+.delete-post-btn {
+  background-color: #FF5151;
+  border: none;
+  color: white;
+}
+
+.delete-alert-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.editing-off {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  filter: blur(20px);
+  transition: 350ms ease-in-out;
 }
 
 .editing-div {
@@ -24,4 +108,5 @@
   border: 1px solid #999999;
   border-radius: 16px;
   background-color: #FFFFFF;
+  transition: 350ms ease-in-out;
 }

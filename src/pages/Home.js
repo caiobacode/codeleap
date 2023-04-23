@@ -25,8 +25,8 @@ export default function Home () {
   }
 
   return (
-    <div className={`home-div ${isOn && 'alert-mode'}`}>
-      <Header/>
+    <div className={`home-div${isOn ? ' alert-mode' : ''}`}>
+      <Header />
       <div className='home-content'>
         <PostForm/>
         { pagePosts?.map((p) => <Post key={p.id} postInfo={p}/>)}

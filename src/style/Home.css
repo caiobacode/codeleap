@@ -7,19 +7,11 @@
   overflow: hidden;
   align-items: center;
   background: #DDDDDD;
-  transition: 200ms ease-in-out;
+  transition: 250ms ease-in-out;
 }
 
 .alert-mode {
-  filter: blur(2px) brightness(0.6);
-  transition: 200ms ease-in-out;
-}
-
-div.alert-mode {
-  position: fixed;
-  transition: 200ms ease-in-out;
-  top: 0;
-  left: 0;
+  opacity: 0.5;
 }
 
 .home-content {

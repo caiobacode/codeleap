@@ -21,9 +21,9 @@ export default function Post ({ postInfo }) {
           username === actualUser &&
           <div className='delete-edit-post-div'>
             <button
-            type='button'
-            className='type-btn'
-            onClick={() => dispatch(setAlertModeOn({ ...postInfo, type: 'delete' }))}
+              type='button'
+              className='type-btn'
+              onClick={() => dispatch(setAlertModeOn({ ...postInfo, type: 'delete' }))}
             >
               <DeleteIconSVG />
             </button>

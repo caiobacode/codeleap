@@ -5,3 +5,18 @@
   margin: 0;
   border: 0;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #7695EC, #3564e3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(to bottom, #8fa9f0, #6286ea );
+  border-radius: 10px;
+}
