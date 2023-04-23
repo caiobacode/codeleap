@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { signupUser } from '../redux/userSlice';
+import { signupUser } from '../redux';
+import { setLocalStorage } from '../actions';
 
 export default function SignupForm () {
   const [username, setUsername] = useState('');
@@ -10,6 +11,7 @@ export default function SignupForm () {
 
   const handleClick = () => {
     dispatch(signupUser(username));
+    setLocalStorage('codeleap-user', username);
     navigate('/home');
   };
 

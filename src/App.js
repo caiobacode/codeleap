@@ -1,17 +1,24 @@
 import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Signup, Home } from './pages/Index';
-import './style/App.css';
-import getPosts from './actions/getPosts';
 import { useDispatch } from 'react-redux';
-import { setPosts } from './redux/postsSlice';
+import './style/App.css';
+
+import { Signup, Home } from './pages/Index';
+import { getPosts, getLocalStorage } from './actions';
+import { setPosts, signupUser } from './redux';
 
 function App () {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    getLoggedUser();
     setInitialPosts();
   }, []);
+
+  async function getLoggedUser () {
+    const user = getLocalStorage('codeleap-user', '');
+    dispatch(signupUser(user));
+  }
 
   async function setInitialPosts () {
     const posts = await getPosts();
