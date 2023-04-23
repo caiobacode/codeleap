@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react';
-import { Header, PostForm, Post } from '../components';
-import '../style/Home.css';
-import { useSelector } from 'react-redux';
-import { selectPosts } from '../redux/postsSlice';
-import { getLocalStorage } from '../actions';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import '../style/Home.css';
+
+import { Header, PostForm, Post } from '../components';
+import { selectPosts } from '../redux/postsSlice';
+import { selectAlertMode } from '../redux/alertModeSlice';
+import { getLocalStorage } from '../actions';
 
 export default function Home () {
   const pagePosts = useSelector(selectPosts);
+  const { isOn } = useSelector(selectAlertMode);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,7 +25,7 @@ export default function Home () {
   }
 
   return (
-    <div className='home-div'>
+    <div className={`home-div ${isOn && 'alert-mode'}`}>
       <Header/>
       <div className='home-content'>
         <PostForm/>

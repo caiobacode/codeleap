@@ -1,0 +1,27 @@
+.alert-div {
+  position: fixed;
+  z-index: 10;
+  background-color: transparent;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+.deleting-div {
+  width: 660px;
+  height: 332px;
+  border: 1px solid #999999;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}
+
+.editing-div {
+  width: 660px;
+  height: 332px;
+  border: 1px solid #999999;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}

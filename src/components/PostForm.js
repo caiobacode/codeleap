@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPosts, setPosts } from '../redux/postsSlice';
 import { selectUser } from '../redux/userSlice';
+import insertPost from '../actions/insertPost';
 
 export default function PostForm () {
   const [postTitle, setPostTitle] = useState('');
@@ -12,16 +13,15 @@ export default function PostForm () {
 
   const dispatch = useDispatch();
 
-  const handleClick = () => {
+  const handleClick = async () => {
     const newPost = {
-      id: 123,
       username: user,
-      created_datetime: new Date().toISOString(),
       title: postTitle,
       content: postContent
     };
+    const postWithIdAndDate = await insertPost(newPost);
 
-    dispatch(setPosts([newPost, ...posts]));
+    dispatch(setPosts([postWithIdAndDate, ...posts]));
     setPostTitle('');
     setPostContent('');
   };

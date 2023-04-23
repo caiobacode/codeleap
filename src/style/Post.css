@@ -6,10 +6,11 @@
   margin-top: 24px;
 }
 
-.post-title-div {
+.post-title-btns-div {
   width: 100%;
   height: 70px;
   display: flex;
+  justify-content: space-between;
   color: white;
   align-items: center;
   padding: 24px;
@@ -21,6 +22,18 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 26px;
+}
+
+.type-btn {
+  background: transparent;
+  border: none;
+}
+
+.delete-edit-post-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
 }
 
 .post-details-div {
