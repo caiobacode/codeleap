@@ -3,6 +3,9 @@ export default function formatDate (date) {
   const actualDate = new Date();
 
   const resultInMinutes = (actualDate - postDateTime) / 1000 / 60;
+  if (resultInMinutes < 1) {
+    return 'now';
+  }
   if (resultInMinutes < 60) {
     return `${parseInt(resultInMinutes)} ${resultInMinutes < 2 ? 'minute' : 'minutes'} ago`;
   }
