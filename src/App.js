@@ -5,18 +5,25 @@ import './style/App.css';
 
 import { Signup, Home } from './pages/Index';
 import { getPosts, getLocalStorage } from './actions';
-import { setPosts, signupUser } from './redux';
+import { setLoadingOff, setPosts, signupUser } from './redux';
 import { selectAlertMode } from './redux/alertModeSlice';
-import { DeletingAlert, EditingAlert, LogoutingAlert } from './components';
+import { DeletingAlert, EditingAlert, LoadingScreen, LogoutingAlert } from './components';
 
 function App () {
   const dispatch = useDispatch();
   const alertPropeties = useSelector(selectAlertMode);
 
   useEffect(() => {
+    renderLoadingScreen();
     getLoggedUser();
     setInitialPosts();
   }, []);
+
+  function renderLoadingScreen () {
+    setTimeout(() => {
+      dispatch(setLoadingOff());
+    }, 1500);
+  }
 
   async function getLoggedUser () {
     const user = getLocalStorage('codeleap-user', '');
@@ -30,6 +37,7 @@ function App () {
 
   return (
     <div className="App">
+      <LoadingScreen />
       <DeletingAlert props={ alertPropeties } />
       <EditingAlert props={ alertPropeties } />
       <LogoutingAlert props={ alertPropeties } />

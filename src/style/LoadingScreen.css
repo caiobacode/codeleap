@@ -1,0 +1,28 @@
+.loading-screen {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  background-color: #DDDDDD;
+  align-items: center;
+  justify-content: center;
+  transition: 250ms ease-in-out;
+}
+
+.loading-screen-off {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  background-color: #DDDDDD;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+
+.codeleap-img {
+  width: 500px;
+}

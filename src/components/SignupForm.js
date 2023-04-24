@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { signupUser } from '../redux';
+import { setLoadingOff, setLoadingOn, signupUser } from '../redux';
 import { setLocalStorage } from '../actions';
 
 export default function SignupForm () {
@@ -10,9 +10,15 @@ export default function SignupForm () {
   const dispatch = useDispatch();
 
   const handleClick = () => {
+    dispatch(setLoadingOn());
+
     dispatch(signupUser(username));
     setLocalStorage('codeleap-user', username);
-    navigate('/home');
+
+    setTimeout(() => {
+      navigate('/home');
+      dispatch(setLoadingOff());
+    }, 1500);
   };
 
   return (

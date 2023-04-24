@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/Alerts.css';
 import { useDispatch } from 'react-redux';
-import { logoutUser, setAlertModeOff } from '../redux';
+import { logoutUser, setAlertModeOff, setLoadingOff, setLoadingOn } from '../redux';
 import { useNavigate } from 'react-router-dom';
 
 export default function LogoutingAlert ({ props: { isOn, alertType } }) {
@@ -18,11 +18,17 @@ export default function LogoutingAlert ({ props: { isOn, alertType } }) {
 
   async function logoutActualUser () {
     dispatch(setAlertModeOff());
+    dispatch(setLoadingOn());
+
+    setTimeout(() => {
+      dispatch(setLoadingOff());
+    }, 1500);
+
     setTimeout(() => {
       localStorage.removeItem('codeleap-user');
       dispatch(logoutUser());
       navigate('/signup');
-    }, 350);
+    }, 250);
   }
 
   return (
