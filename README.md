@@ -6,7 +6,7 @@
 
 
 ## Description
-<p>Codeleap teste</p>
+<p>This application was developed as a technical case study. In it, you can log in with your username and write posts that will be stored in a database, accessible in real-time for all users around the world.</p>
 
 ## 💻 Tecnologies used
 > [![JavaScript][JavaScript]][JavaScript-url]
