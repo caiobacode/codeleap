@@ -19,7 +19,7 @@
 
 ### 📚 Requirements to run this project:
 - Git.
-- NPM - v >= 7.0 (if you wanna run with Node).
+- NPM.
 
 ```bash
 # Clone the repo
