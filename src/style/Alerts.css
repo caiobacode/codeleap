@@ -48,9 +48,9 @@
 
 .delete-alert-btns-div {
   width: 100%;
-  justify-content: end;
-  align-items: center;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   transition: 350ms ease-in-out;
 }
 
@@ -133,7 +133,7 @@
 .update-post-btns-div {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   height: 70px;
   align-items: center;
 }
