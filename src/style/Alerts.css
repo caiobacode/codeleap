@@ -30,6 +30,7 @@
 }
 
 .deleting-div {
+  margin-right: 10px;
   width: 660px;
   height: 146px;
   padding: 24px;
@@ -106,6 +107,7 @@
 }
 
 .editing-div {
+  margin-right: 10px;
   width: 660px;
   padding: 24px;
   box-sizing: border-box;
