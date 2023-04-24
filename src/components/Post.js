@@ -42,7 +42,7 @@ export default function Post ({ postInfo }) {
         <span className='post-date'>{formatedPostDate}</span>
       </div>
       <div className='post-content-div'>
-        <text className='content-text'>{content}</text>
+        <span className='content-text'>{content}</span>
       </div>
     </div>
   );
