@@ -22,6 +22,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  padding-bottom: 50px;
   background: #FFFFFF;
 }
 
@@ -124,6 +125,33 @@
 }
 
 .post-btn:disabled {
+  cursor: auto;
+  opacity: 0.5;
+  background: #777777;
+}
+
+.load-more-btn {
+  max-width: 120px;
+  width: 90%;
+  margin-top: 24px;
+  height: 32px;
+  cursor: pointer;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 8px;
+  color: white;
+  background-color: #7695EC;
+  transition: 150ms ease-in-out;
+}
+
+.load-more-btn:not([disabled]):hover {
+  transform: scale(1.04);
+}
+
+.load-more-btn:disabled {
   cursor: auto;
   opacity: 0.5;
   background: #777777;

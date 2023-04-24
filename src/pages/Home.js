@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import '../style/Home.css';
 
 import { Header, PostForm, Post } from '../components';
-import { selectPosts } from '../redux/postsSlice';
+import { selectPosts, setPosts } from '../redux/postsSlice';
 import { selectAlertMode } from '../redux/alertModeSlice';
-import { getLocalStorage } from '../actions';
+import { getLocalStorage, getTenMorePosts } from '../actions';
 
 export default function Home () {
   const pagePosts = useSelector(selectPosts);
   const { isOn } = useSelector(selectAlertMode);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     verifyLoggedUser();
@@ -24,12 +25,25 @@ export default function Home () {
     }
   }
 
+  async function setTenMorePosts () {
+    const tenMorePosts = await getTenMorePosts(pagePosts.length);
+    const totalPosts = [...pagePosts, ...tenMorePosts];
+    dispatch(setPosts(totalPosts));
+  }
+
   return (
     <div className={`home-div${isOn ? ' alert-mode' : ''}`}>
       <Header />
       <div className='home-content'>
         <PostForm/>
         { pagePosts?.map((p) => <Post key={p.id} postInfo={p}/>)}
+        <button
+          type='button'
+          className='load-more-btn'
+          onClick={setTenMorePosts}
+        >
+          Load more
+        </button>
       </div>
     </div>
   );
