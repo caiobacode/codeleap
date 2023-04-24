@@ -76,11 +76,13 @@
 
 .cancel-update-btn {
   background-color: #FFFFFF;
+  cursor: pointer;
   margin-right: 16px;
 }
 
 .delete-post-btn {
   background-color: #FF5151;
+  cursor: pointer;
   border: none;
   color: white;
 }
@@ -131,12 +133,18 @@
 }
 
 .update-post-btn {
+  cursor: pointer;
   border: none;
   background-color: #47B960;
   color: white;
 }
 
-.update-post-btn:hover {
+.update-post-btn:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.update-post-btn:not([disabled]):hover {
   transform: scale(1.05);
   background-color: #318142;
 }

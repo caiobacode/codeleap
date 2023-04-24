@@ -73,6 +73,7 @@ export default function EditingAlert ({ props: { isOn, alertType, updatingPost }
           </button>
           <button
             className='update-post-btn'
+            disabled={newContent === '' || newTitle === ''}
             type='button'
             onClick={updateActualPost}
           >
