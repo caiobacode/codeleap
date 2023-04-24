@@ -19,6 +19,7 @@
 
 .deleting-off {
   opacity: 0;
+  max-width: 660px;
   width: 0;
   height: 0;
   display: flex;
@@ -98,6 +99,7 @@
 }
 
 .editing-off {
+  max-width: 660px;
   width: 0;
   height: 0;
   opacity: 0;
