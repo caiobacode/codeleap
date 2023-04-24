@@ -11,17 +11,24 @@
   height: 70px;
   display: flex;
   justify-content: space-between;
-  color: white;
   align-items: center;
   padding: 24px;
   box-sizing: border-box;
   background: #7695EC;
   border-radius: 16px 16px 0px 0px;
+}
+
+.post-title {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
   line-height: 26px;
+  color: white;
+  max-width: 490px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .type-btn {
@@ -49,7 +56,8 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 24px;
+  align-items: center;
+  padding: 0px 24px 0px 24px;
   border: 1px solid #999999 ;
   border-bottom: none;
   border-top: none;
@@ -81,6 +89,10 @@
   font-size: 18px;
   line-height: 21px;
   color: #777777;
+  max-width: 450px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content-text {
@@ -95,4 +107,68 @@
   display: -webkit-box;
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical; 
+}
+
+@media(max-width: 700px) {
+  .post-div {
+    height: 366px;
+  }
+  .post-username {
+    max-width: 300px; 
+  }
+  .content-text {
+    -webkit-line-clamp: 10;
+  }
+  .post-content-div {
+    height: 235px;
+  }
+  .content-text {
+    font-size: 15px;
+  }
+  .post-title {
+    font-size: 18px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; 
+  }
+}
+
+@media(max-width: 550px) {
+  .post-title {
+    font-size: 14px;
+    max-width: 250px;
+  }
+  .post-date {
+    font-size: 14px;
+  }
+  .post-username {
+    font-size: 14px;
+    max-width: 200px; 
+  }
+}
+
+@media(max-width: 420px) {
+  .content-text {
+    font-size: 13px;
+  }
+  .delete-edit-post-div {
+    width: 50px;
+  }
+  .post-username {
+    font-size: 14px;
+    max-width: 100px; 
+  }
+}
+
+@media(max-width: 350px) {
+  .post-date {
+    font-size: 12px;
+  }
+  .post-username {
+    font-size: 12px;
+    max-width: 90px; 
+  }
 }

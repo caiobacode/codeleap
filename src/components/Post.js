@@ -16,7 +16,7 @@ export default function Post ({ postInfo }) {
   return (
     <div className='post-div'>
       <div className='post-title-btns-div'>
-        <p>{title}</p>
+        <span className='post-title'>{title}</span>
         {
           username === actualUser &&
           <div className='delete-edit-post-div'>
@@ -38,7 +38,7 @@ export default function Post ({ postInfo }) {
         }
       </div>
       <div className='post-details-div'>
-        <span className='post-username'>@{username}</span>
+        <p className='post-username'>@{username}</p>
         <span className='post-date'>{formatedPostDate}</span>
       </div>
       <div className='post-content-div'>

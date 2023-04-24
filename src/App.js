@@ -22,7 +22,7 @@ function App () {
   function renderLoadingScreen () {
     setTimeout(() => {
       dispatch(setLoadingOff());
-    }, 1500);
+    }, 1000);
   }
 
   async function getLoggedUser () {

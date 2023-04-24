@@ -30,6 +30,7 @@ export default function SignupForm () {
           value={username}
           onChange={({ target: { value } }) => setUsername(value)}
           placeholder='John doe'
+          maxLength='30'
           className='signup-input'
           type='text'
         />

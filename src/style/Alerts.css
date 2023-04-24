@@ -31,7 +31,8 @@
 
 .deleting-div {
   margin-right: 10px;
-  width: 660px;
+  max-width: 660px;
+  width: 90%;
   height: 146px;
   padding: 24px;
   box-sizing: border-box;
@@ -108,7 +109,8 @@
 
 .editing-div {
   margin-right: 10px;
-  width: 660px;
+  max-width: 660px;
+  width: 90%;
   padding: 24px;
   box-sizing: border-box;
   height: 332px;
@@ -149,4 +151,16 @@
 .update-post-btn:not([disabled]):hover {
   transform: scale(1.05);
   background-color: #318142;
+}
+
+@media (max-width: 500px) {
+  .delete-alert-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 260px) {
+  .delete-alert-text {
+    font-size: 14px;
+  }
 }

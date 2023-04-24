@@ -128,3 +128,9 @@
   opacity: 0.5;
   background: #777777;
 }
+
+@media (max-width: 400px) {
+  .post-question {
+    font-size: 18px;
+  }
+}

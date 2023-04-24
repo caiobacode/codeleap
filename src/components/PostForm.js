@@ -33,6 +33,7 @@ export default function PostForm () {
         <span className='form-span-type'>Title</span>
         <input
           type='text'
+          maxlength='50'
           onChange={({ target: { value } }) => setPostTitle(value)}
           value={postTitle}
           className='title-input'
@@ -42,6 +43,7 @@ export default function PostForm () {
       <div className='input-div'>
         <span className='form-span-type'>Content</span>
         <textarea
+          maxlength='450'
           value={postContent}
           onChange={({ target: { value } }) => setPostContent(value)}
           className='content-input'
