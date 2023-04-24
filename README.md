@@ -37,7 +37,7 @@ npm start
 
 ## ⚠️ Notes
 
-> I Just build the Front-end of the application
+> I Just build the Front-end of the application.<br/>
 > All APIs requests are send to this api: https://dev.codeleap.co.uk/careers/
 
 
