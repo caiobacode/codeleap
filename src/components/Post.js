@@ -38,7 +38,7 @@ export default function Post ({ postInfo }) {
         }
       </div>
       <div className='post-details-div'>
-        <p className='post-username'>@{username}</p>
+        <p className='post-username'>@{username.replaceAll(' ', '_')}</p>
         <span className='post-date'>{formatedPostDate}</span>
       </div>
       <div className='post-content-div'>
