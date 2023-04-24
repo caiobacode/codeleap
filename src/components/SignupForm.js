@@ -12,8 +12,8 @@ export default function SignupForm () {
   const handleClick = () => {
     dispatch(setLoadingOn());
 
-    dispatch(signupUser(username));
-    setLocalStorage('codeleap-user', username);
+    dispatch(signupUser(username.replaceAll(' ', '_')));
+    setLocalStorage('codeleap-user', username.replaceAll(' ', '_'));
 
     setTimeout(() => {
       navigate('/home');
