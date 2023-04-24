@@ -51,9 +51,8 @@
   transition: 350ms ease-in-out;
 }
 
-.cancel-update-btn, .delete-post-btn {
+.cancel-update-btn, .delete-post-btn, .update-post-btn {
   border-radius: 8px;
-  background-color: #FFFFFF;
   width: 120px;
   height: 32px;
   border: solid 1px #999999;
@@ -98,15 +97,46 @@
   width: 0;
   height: 0;
   opacity: 0;
+  padding: 24px;
+  box-sizing: border-box;
   filter: blur(20px);
   transition: 350ms ease-in-out;
 }
 
 .editing-div {
   width: 660px;
+  padding: 24px;
+  box-sizing: border-box;
   height: 332px;
   border: 1px solid #999999;
   border-radius: 16px;
   background-color: #FFFFFF;
   transition: 350ms ease-in-out;
+}
+
+.edit-item-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.update-post-btns-div {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  height: 70px;
+  align-items: center;
+}
+
+.update-post-btn {
+  border: none;
+  background-color: #47B960;
+  color: white;
+}
+
+.update-post-btn:hover {
+  transform: scale(1.05);
+  background-color: #318142;
 }

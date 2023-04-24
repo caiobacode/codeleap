@@ -27,7 +27,7 @@ export default function DeletingAlert ({ props: { isOn, alertType, updatingPost 
   return (
     <div className={alertClassName}>
       <div className={divClassName}>
-        <h1 className='delete-alert-text'>Are you sure you want to delete this item?</h1>
+        <p className='delete-alert-text'>Are you sure you want to delete this item?</p>
         <div className='delete-alert-btns-div'>
           <button
             className='cancel-update-btn'
