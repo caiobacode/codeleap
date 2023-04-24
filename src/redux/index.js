@@ -1,5 +1,5 @@
-import { signupUser } from './userSlice';
+import { signupUser, logoutUser } from './userSlice';
 import { setPosts } from './postsSlice';
 import { setAlertModeOff, setAlertModeOn } from './alertModeSlice';
 
-export { signupUser, setPosts, setAlertModeOff, setAlertModeOn };
+export { signupUser, logoutUser, setPosts, setAlertModeOff, setAlertModeOn };

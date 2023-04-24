@@ -6,11 +6,12 @@ export const slice = createSlice({
   reducers: {
     signupUser (state, { payload }) {
       return payload;
-    }
+    },
+    logoutUser () { return ''; }
   }
 });
 
-export const { signupUser } = slice.actions;
+export const { signupUser, logoutUser } = slice.actions;
 
 export const selectUser = state => state.user;
 

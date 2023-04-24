@@ -7,7 +7,7 @@ import { Signup, Home } from './pages/Index';
 import { getPosts, getLocalStorage } from './actions';
 import { setPosts, signupUser } from './redux';
 import { selectAlertMode } from './redux/alertModeSlice';
-import { DeletingAlert, EditingAlert } from './components';
+import { DeletingAlert, EditingAlert, LogoutingAlert } from './components';
 
 function App () {
   const dispatch = useDispatch();
@@ -32,6 +32,7 @@ function App () {
     <div className="App">
       <DeletingAlert props={ alertPropeties } />
       <EditingAlert props={ alertPropeties } />
+      <LogoutingAlert props={ alertPropeties } />
       <Routes>
         <Route Component={Signup} exact path='/'></Route>
         <Route Component={Signup} path='/signup'></Route>
