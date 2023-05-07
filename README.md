@@ -2,7 +2,7 @@
 
 <a href="https://codeleap-seven.vercel.app/signup" target="_blank"><img alt="codeleap-gif" src="./codeleap.gif"></a>
 
-> Click on the gif above to acess the deploy
+> <strong>Click on the gif above to acess the deploy</strong>
 
 
 ## Description
